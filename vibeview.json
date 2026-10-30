@@ -1,13 +1,14 @@
 {
   "platforms": {
     "android": {
+      "appId": "motormeet-uruguay-pgkzfnxe",
       "build": {
         "env": {
           "APP_VARIANT": "development"
         },
         "profiles": {
           "development": {
-            "command": "chmod +x gradlew && ./gradlew assembleDebug",
+            "command": "sed -i -e 's/\\r$//' gradlew && chmod +x gradlew && ./gradlew assembleDebug",
             "artifact": "app/build/outputs/apk/debug/*.apk"
           }
         }
