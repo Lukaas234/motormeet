@@ -13,6 +13,19 @@
           }
         }
       }
+    },
+    "ios": {
+      "build": {
+        "env": {
+          "APP_VARIANT": "development"
+        },
+        "profiles": {
+          "development": {
+            "command": "sed -i -e 's/\\r$//' gradlew && chmod +x gradlew && ./gradlew :app:linkDebugFrameworkIosSimulatorArm64",
+            "artifact": "app/build/bin/iosSimulatorArm64/debugFramework/*.framework"
+          }
+        }
+      }
     }
   }
 }
