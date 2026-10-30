@@ -1,0 +1,2 @@
+rootProject.name = 'MotorMeet uruguay'
+include ':app'

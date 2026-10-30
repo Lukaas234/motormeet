@@ -1,0 +1,30 @@
+{
+  "platforms": {
+    "android": {
+      "build": {
+        "env": {
+          "APP_VARIANT": "development"
+        },
+        "profiles": {
+          "development": {
+            "command": "./gradlew assembleDebug",
+            "artifact": "app/build/outputs/apk/debug/*.apk"
+          }
+        }
+      }
+    },
+    "ios": {
+      "build": {
+        "env": {
+          "APP_VARIANT": "development"
+        },
+        "profiles": {
+          "development": {
+            "command": "./gradlew :app:compileDebugKotlinForIosSimulatorX64",
+            "artifact": "app/build/compose/binaries/iosSimulatorX64/debug/*.app"
+          }
+        }
+      }
+    }
+  }
+}
